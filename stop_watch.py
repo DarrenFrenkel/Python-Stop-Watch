@@ -12,16 +12,19 @@ def format(t):
     minute = 0
     tenths_second = t % 10
     second = (t - tenths_second) % 100/10 
+
     subtractor = (t - tenths_second) % 100
     ten_second = (t -(tenths_second + subtractor))/100
     
     if ten_second > 5:
         minute = ten_second/6
         ten_second = ten_second % 6
-     
-    return str(minute) + ":" + str(ten_second) + str(second) + "." + str(tenths_second)
+	
+    return str(int(minute)) + ":" + str(int(ten_second)) + str(int(second)) + "." + str(int(tenths_second))
     pass
-
+	
+	
+print (format(222))
 
 # define event handlers for buttons; "Start", "Stop", "Reset"
 def start():
@@ -62,8 +65,8 @@ def numerical_counters(x,y):
 
 # define draw handler
 def draw_handler1(canvas):
-    canvas.draw_text(format(t),[130,200], 60, "White")
-    canvas.draw_text(numerical_counters(x,y),[330,50], 40, "Green")
+    canvas.draw_text(format(t),[90,260], 60, "White")
+    canvas.draw_text(numerical_counters(x,y),[310,80], 40, "Green")
     
 
     
