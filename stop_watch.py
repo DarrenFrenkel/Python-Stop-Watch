@@ -24,7 +24,7 @@ def format(t):
     pass
 	
 	
-print (format(222))
+
 
 # define event handlers for buttons; "Start", "Stop", "Reset"
 def start():
