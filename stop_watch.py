@@ -9,6 +9,7 @@ timer_running = False
 # define helper function format that converts time
 # in tenths of seconds into formatted string A:BC.D
 def format(t):
+	'''Creates the format of your stop watch'''
     minute = 0
     tenths_second = t % 10
     second = (t - tenths_second) % 100/10 
